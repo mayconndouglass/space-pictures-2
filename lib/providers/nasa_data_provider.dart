@@ -13,7 +13,7 @@ class NasaDataProvider with ChangeNotifier {
     final url = "$_baseUrl&count=$count";
 
     final response = await http.get(Uri.parse(url));
-    debugPrint(response.toString());
+    
     try {
       final List<dynamic> body = jsonDecode(response.body);
       dataList.clear();
