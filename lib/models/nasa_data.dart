@@ -7,7 +7,9 @@ class NasaData {
   final String title;
   final String url;
   final String serviceVersion;
-
+  String imgDefault = 
+  "https://media.licdn.com/dms/image/D4E22AQEx76VV55Adzw/feedshare-shrink_800/0/1687878193317?e=1691020800&v=beta&t=hSp1VMfSrjENKDfR8bqRr83HPxfp5coUM1gAChRrEW4";
+  
   NasaData({
     required this.copyright,
     required this.date,
@@ -27,7 +29,7 @@ class NasaData {
       hdurl: data['hdurl'] ?? '',
       mediaType: data['media_type'] ?? '',
       title: data['title'] ?? '',
-      url: data['url'] ?? '',
+      url: data['url'] ?? 'imgDefault',
       serviceVersion: data['service_version'] ?? '',
     );
   }

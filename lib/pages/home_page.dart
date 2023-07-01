@@ -12,7 +12,7 @@ class HomePage extends StatefulWidget {
 
 class HomePageState extends State<HomePage> {
   final TextEditingController _resultCountController = TextEditingController();
-  int count = 10;
+  int count = 20;
    
   @override
   void initState() {
@@ -34,7 +34,7 @@ class HomePageState extends State<HomePage> {
     return Consumer<NasaDataProvider>(
       builder: (context, provider, _) {
         return Scaffold(
-          backgroundColor: Colors.grey[850],
+          backgroundColor: Colors.grey[900],
           appBar: AppBar(
             title: const Text('Space Pictures'),
             titleTextStyle: const TextStyle(

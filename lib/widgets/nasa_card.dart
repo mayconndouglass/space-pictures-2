@@ -23,7 +23,7 @@ class NasaCard extends StatelessWidget {
               const Positioned.fill(
                 child: Center(
                   child: CircularProgressIndicator(
-                    valueColor: AlwaysStoppedAnimation(Colors.blue),
+                    valueColor: AlwaysStoppedAnimation(Color.fromARGB(255, 255, 117, 0)),
                   ),
                 ),
               ),
@@ -49,7 +49,7 @@ class NasaCard extends StatelessWidget {
                     child: const SizedBox(
                       height: 250,
                       width: 500,
-                      child: SizedBox(), // Ocupa espaço para o InkWell funcionar
+                      child: SizedBox(),
                     ),
                   ),
                 ),
