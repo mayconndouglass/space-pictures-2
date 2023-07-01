@@ -47,7 +47,7 @@ class DetailsPage extends StatelessWidget {
                 SizedBox(
                   // width: 300,
                   child: Text(
-                    "© ${data.copyright}",
+                    "©${data.copyright}",
                     softWrap: true,
                     // textAlign: TextAlign.end,
                     style: const TextStyle(

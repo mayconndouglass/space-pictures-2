@@ -7,8 +7,6 @@ class NasaData {
   final String title;
   final String url;
   final String serviceVersion;
-  String imgDefault = 
-  "https://media.licdn.com/dms/image/D4E22AQEx76VV55Adzw/feedshare-shrink_800/0/1687878193317?e=1691020800&v=beta&t=hSp1VMfSrjENKDfR8bqRr83HPxfp5coUM1gAChRrEW4";
   
   NasaData({
     required this.copyright,
@@ -22,6 +20,9 @@ class NasaData {
   });
 
   factory NasaData.fromJson(Map<String, dynamic> data) {
+    String imgDefault = 
+  "https://media.licdn.com/dms/image/D4E22AQEx76VV55Adzw/feedshare-shrink_800/0/1687878193317?e=1691020800&v=beta&t=hSp1VMfSrjENKDfR8bqRr83HPxfp5coUM1gAChRrEW4";
+
     return NasaData(
       copyright: data['copyright'] ?? 'no-copyright',
       date: data['date'] ?? '',
@@ -29,7 +30,8 @@ class NasaData {
       hdurl: data['hdurl'] ?? '',
       mediaType: data['media_type'] ?? '',
       title: data['title'] ?? '',
-      url: data['url'] ?? 'imgDefault',
+      url: data['media_type'] != 'image' || data['media_type'] == null ?
+        imgDefault : data['url'],
       serviceVersion: data['service_version'] ?? '',
     );
   }
